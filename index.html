@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="Styles/style.css">
+        <title>To-Do</title>
+    </head>
+    <body>
+
+        <h1>To-do list</h1>
+
+        <div class="content">
+
+            <form id="add-todo-form">
+                <input type="text" name="task" placeholder="To-Do" autocomplete="off">
+                <button>Add To-Do</button>
+            </form>
+
+            <ul id="todo-list"></ul>
+
+        </div>
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyDADv_xa39Q1lbv4I3htPOeIq8BiDgTHfo",
+            authDomain: "to-do-a03cc.firebaseapp.com",
+            projectId: "to-do-a03cc",
+            storageBucket: "to-do-a03cc.appspot.com",
+            messagingSenderId: "988440150951",
+            appId: "1:988440150951:web:46da5da4116128b9a2ec82"
+          };
+          // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+        </script>
+        <script src="Scripts/script.js"></script>
+    </body>
+</html>
